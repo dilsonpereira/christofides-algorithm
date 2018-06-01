@@ -1,3 +1,6 @@
 [submodule "Matching"]
 	path = Matching
 	url = https://github.com/dilsonpereira/Minimum-Cost-Perfect-Matching
+[submodule "TSPLIB"]
+	path = TSPLIB
+	url = https://github.com/mastqe/tsplib
