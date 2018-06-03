@@ -10,17 +10,17 @@ using namespace std;
 class TSPLIB_parser
 {
 public:
-	TSPLIB_parser(string): filename(filename) { Read(); };
+	TSPLIB_parser(string filename): filename(filename) { Read(); };
 
-	const Graph & GetGraph() { return G; };
-	const vector<int> & GetCosts() { return cost; };
-	const vector<double> & GetXCoordinates()
+	const Graph & GetGraph() const { return G; };
+	const vector<int> & GetCosts() const { return cost; };
+	const vector<double> & GetXCoordinates() const
 	{
 		if(X.size() == 0)
 			throw "Error: no coordinates available";
 		return X;
 	};
-	const vector<double> & GetYCoordinates()
+	const vector<double> & GetYCoordinates() const
 	{
 		if(Y.size() == 0)
 			throw "Error: no coordinates available";
