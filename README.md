@@ -1,5 +1,10 @@
 # A C++ implementation of the Christofides algorithm for instances in TSPLIB format
 
+To clone the repo and its dependencies (submodules): 
+```
+git clone --recursive https://github.com/dilsonpereira/christofides-algorithm
+```
+
 Compilation on Linux:
 ```
 make christofides
