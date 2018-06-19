@@ -3,7 +3,7 @@
 void TSPLIB_parser::Read()
 {
 	ifstream file;
-	file.open(filename);
+	file.open(filename.c_str());
 
 	if(!file.is_open())
 		throw "Error: could not open instance file";

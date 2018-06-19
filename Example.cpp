@@ -5,6 +5,7 @@
 #include "TSPLIB_parser.h"
 #include <fstream>
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 void PrintNeato(const TSPLIB_parser & T, const vector<int> & s, const string & filename)
@@ -14,7 +15,7 @@ void PrintNeato(const TSPLIB_parser & T, const vector<int> & s, const string & f
 		const vector<double> & X = T.GetXCoordinates();
 		const vector<double> & Y = T.GetYCoordinates();
 
-		ofstream F(filename);
+		ofstream F(filename.c_str());
 
 		F << "graph G{" << endl;
 		for(int i = 0; i < X.size(); i++)
