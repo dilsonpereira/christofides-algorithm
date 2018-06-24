@@ -15,7 +15,7 @@ pair< list<int>, double > Prim(const Graph & G, const vector<double> & cost)
 	double obj = 0;
 	
 	//Put 0 in the heap
-	B.Insert(cost[0], 0);
+	B.Insert(0, 0);
 
 	while(B.Size() > 0)
 	{
