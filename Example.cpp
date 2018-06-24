@@ -18,10 +18,10 @@ void PrintNeato(const TSPLIB_parser & T, const vector<int> & s, const string & f
 		ofstream F(filename.c_str());
 
 		F << "graph G{" << endl;
-		for(int i = 0; i < X.size(); i++)
+		for(int i = 0; i < (int)X.size(); i++)
 			F << "n" << i << "[pos = \"" << X[i]/100.0 << "," << Y[i]/100.0 << "!\", height=0.1, width=0.1, label=\"\"];" << endl;
 
-		for(int i = 0; i < s.size(); i++)
+		for(int i = 0; i < (int)s.size(); i++)
 			F << "n" << T.GetGraph().GetEdge(s[i]).first << "--n" << T.GetGraph().GetEdge(s[i]).second << "[color = red];" << endl;
 
 		F << "}" << endl;
@@ -79,7 +79,7 @@ int main(int argc, char * argv[])
 		if(printSequence)
 		{
 			cout << "Edges:" << endl;
-			for(int i = 0; i < s.size(); i++)
+			for(int i = 0; i < (int)s.size(); i++)
 				cout << T.GetGraph().GetEdge(s[i]).first << " " << T.GetGraph().GetEdge(s[i]).second << endl;
 			cout << endl;
 		}

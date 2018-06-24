@@ -60,7 +60,7 @@ pair< list<int>, double > Prim(const Graph & G, const vector<double> & cost)
 		}
 	}
 
-	if(mst.size() < G.GetNumVertices()-1)
+	if((int)mst.size() < G.GetNumVertices()-1)
 		throw "Error: graph does not have a spanning tree";
 
 	return pair< list<int>, double >(mst, obj);

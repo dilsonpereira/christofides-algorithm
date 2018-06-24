@@ -1,5 +1,5 @@
 
-FLAG = -O3 -m64
+FLAG = -O3 -m64 -Wall
 
 Matching.o: ./Matching/Matching.cpp ./Matching/Matching.h ./Matching/BinaryHeap.h ./Matching/Globals.h ./Matching/Graph.h 
 	g++ $(FLAG) -c ./Matching/Matching.cpp -o Matching.o

@@ -28,9 +28,9 @@ pair< vector<int>, double > Christofides(const Graph & G, const vector<double> &
 	//Create a graph with the odd degree vertices
 	Graph O(odd.size());
 	vector<double> costO;
-	for(int i = 0; i < odd.size(); i++)
+	for(int i = 0; i < (int)odd.size(); i++)
 	{
-		for(int j = i+1; j < odd.size(); j++)
+		for(int j = i+1; j < (int)odd.size(); j++)
 		{
 			if(G.AdjMat()[odd[i]][odd[j]])
 			{
