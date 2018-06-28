@@ -11,11 +11,16 @@ make christofides
 ```
 Usage:
 ```
-./christofides -f <inputFile> [-p] [-g <outputFile>]
+./christofides -f <inputFile> [--coord] [-p] [-g <outputFile>]
 ```
-Option ```-p``` will print the edges in the solution. 
 
-Option ```-g``` will output the solution in Graphviz neato format to *outpuFile*. If you have Graphviz installed and instance coordinates are available, you can generate an image of the solution by running
+Option `-f` is used to specify the file name.
+
+The input file will be assumed to be in a TSPLIB format unless option `--coord` is provided. In that case, the first line of the file should give the number of vertices n followed by n lines giving the X and Y coordinates of the corresponding vertices.
+
+Option `-p` will print the edges in the solution. 
+
+Option `-g` will output the solution in Graphviz neato format to *outpuFile*. If you have Graphviz installed and instance coordinates are available, you can generate an image of the solution by running
 ```
 neato -Tps <christofidesOutputFile> > <image.eps>
 ```
